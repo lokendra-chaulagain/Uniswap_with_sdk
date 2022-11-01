@@ -7,8 +7,9 @@ const Home = () => {
   return (
     <div className="app_body">
       <div className="pt-3 px-4 d-flex container justify-content-end">
-        <button  onClick={connectWallet} type="button" className="custom_button btn px-4 py-2 rounded-pill">
-         {currentAccount ? currentAccount :  "Connect Wallet"}
+        <button onClick={connectWallet} type="button" className="custom_button btn px-4 py-2 rounded-pill">
+          {currentAccount ? `${currentAccount.substring(0, 10)}... ` : "Connect Wallet"}
+
         </button>
       </div>
 

@@ -3,7 +3,7 @@ import { UniSwapContext } from "../context/Context";
 import SettingModal from "./SettingModal";
 
 const MainCard = () => {
-  const { connectWallet, currentAccount } = useContext(UniSwapContext);
+  const { connectWallet, currentAccount, slippageAmount, setSlippageAmount, deadlineMinutes, setDeadlineMinutes } = useContext(UniSwapContext);
   return (
     <div className="card customCard px-2 py-3 border-1 rounded-1">
       <div className="d-flex mb-2 align-items-center justify-content-between ">

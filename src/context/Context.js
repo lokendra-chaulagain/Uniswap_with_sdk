@@ -5,6 +5,17 @@ export const UniSwapContext = createContext();
 
 export const UniSwapContextProvider = ({ children }) => {
   const [currentAccount, setCurrentAccount] = useState(undefined);
+  const [slippageAmount, setSlippageAmount] = useState(3); //default 3 %
+  const [deadlineMinutes, setDeadlineMinutes] = useState(2); //default 2min
+  const [inputAmount, setInputAmount] = useState(undefined);
+  const [outputAmount, setOutputAmount] = useState(undefined);
+  const [transaction, setTransaction] = useState(undefined);
+  const [loading, setLoading] = useState(false);
+  const [ratio, setRatio] = useState(undefined);
+  const [wethContract, setWethContract] = useState(undefined);
+  const [uniContract, setUniContract] = useState(undefined);
+  const [wethAmount, setWethAmount] = useState(undefined);
+  const [uniAmount, setUniAmount] = useState(undefined);
 
   // This functions runs on every page refresh and gets connected wallet address.
   useEffect(() => {
@@ -56,5 +67,5 @@ export const UniSwapContextProvider = ({ children }) => {
     walletRemovedOrWalletChangedListener();
   });
 
-  return <UniSwapContext.Provider value={{ connectWallet, currentAccount }}>{children}</UniSwapContext.Provider>;
+  return <UniSwapContext.Provider value={{ connectWallet, currentAccount, slippageAmount, setSlippageAmount, deadlineMinutes, setDeadlineMinutes }}>{children}</UniSwapContext.Provider>;
 };
