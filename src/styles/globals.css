@@ -1,0 +1,53 @@
+.app_body {
+  background-color: #0b0c1a !important;
+  color: #afafd7 !important ;
+  height: 100vh;
+}
+.customCard {
+  background-color: #0e101b !important;
+  border: 1px solid #1e5262 !important;
+}
+
+.custom_button {
+  background-color: #141a2a !important;
+  border: 1px solid #1e5262 !important;
+  color: #afafd7 !important;
+  font-size: 18px !important;
+}
+
+.custom_button:hover {
+  color: whitesmoke !important;
+  border-color: #42b2d4 !important;
+}
+
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  color: white !important;
+  border-color: #0fb5e7 !important;
+  background-color: #354575 !important;
+}
+
+.pure_blue {
+  color: blue !important;
+}
+
+.input_field {
+  background-color: #141a2a !important;
+  color: #afafd7 !important;
+  font-size: 20px !important;
+  height: 100% !important;
+  width: 100% !important;
+  outline: none;
+}
+
+.setting_button {
+  color: #afafd7 !important;
+  font-size: 18px !important;
+}
+
+.setting_button:hover {
+  color: whitesmoke !important;
+}
